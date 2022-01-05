@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
-import Image from "next/image"
+import Image from "next/image";
 import { BiShoppingBag } from "react-icons/bi";
 import StoreContext from "../../context/store-context";
 import { formatPrice, resetOptions } from "../../utils/helper-functions";
@@ -58,9 +58,7 @@ const Product = ({ product }) => {
         <div className={styles.placeholder}>
           <Image
             objectFit="cover"
-            height="100%"
-            width="100%"
-            priority={true}
+            layout="fill"
             loading="eager"
             src={product.thumbnail}
             alt={`${product.title}`}
